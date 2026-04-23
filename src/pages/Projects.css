@@ -1,0 +1,139 @@
+.projects-page {
+  min-height: calc(100vh - 88px);
+}
+
+.projects-hero-band,
+.projects-grid {
+  padding: clamp(28px, 5vw, 56px);
+}
+
+.projects-hero-band {
+  display: grid;
+  gap: 18px;
+  border-bottom: 1px solid var(--line);
+}
+
+.projects-hero-band h1 {
+  margin: 0;
+  max-width: 14ch;
+  font-family: var(--font-display);
+  font-size: clamp(2.4rem, 6vw, 4.8rem);
+  line-height: 0.98;
+}
+
+.projects-hero-band p:last-child {
+  max-width: 72ch;
+  margin: 0;
+  color: var(--muted);
+}
+
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 20px;
+}
+
+.project-card {
+  display: grid;
+  gap: 18px;
+  padding: 24px;
+  background: rgba(255, 250, 243, 0.85);
+  border: 1px solid var(--line);
+  transition: transform 180ms ease, box-shadow 180ms ease, border-color 180ms ease;
+}
+
+.project-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow);
+  border-color: rgba(36, 49, 79, 0.24);
+}
+
+.project-topline,
+.project-main,
+.project-actions {
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.project-index,
+.project-type,
+.project-duration,
+.outcome-list li,
+.action-note {
+  font-weight: 700;
+}
+
+.project-index {
+  color: var(--terracotta);
+}
+
+.project-type {
+  color: var(--gold);
+}
+
+.project-main h2 {
+  margin: 0;
+  font-size: 1.6rem;
+}
+
+.project-org,
+.project-description,
+.project-note {
+  margin: 0;
+  color: var(--muted);
+}
+
+.project-duration {
+  color: var(--navy);
+}
+
+.outcome-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.outcome-list li {
+  padding: 10px 14px;
+  background: var(--surface-strong);
+  color: var(--ink);
+}
+
+.project-actions a,
+.action-note {
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
+  padding: 0 16px;
+  text-decoration: none;
+}
+
+.project-actions a {
+  background: var(--navy);
+  color: #fff;
+}
+
+.project-actions a:hover {
+  background: var(--terracotta);
+}
+
+.action-note {
+  border: 1px dashed var(--line);
+  color: var(--muted);
+}
+
+.project-note {
+  border-top: 1px solid var(--line);
+  padding-top: 14px;
+}
+
+@media (max-width: 900px) {
+  .projects-grid {
+    grid-template-columns: 1fr;
+  }
+}
