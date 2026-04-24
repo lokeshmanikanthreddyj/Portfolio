@@ -1,5 +1,4 @@
 import React from 'react';
-import profileImage from '../assets/lokesh-profile.png';
 import {
   about,
   credentials,
@@ -41,7 +40,35 @@ function Home() {
         </div>
 
         <div className="hero-visual">
-          <img src={profileImage} alt="Illustrated profile card for Lokesh Manikanth Reddy" />
+          <div className="hero-panel">
+            <div className="hero-panel-top">
+              <p className="hero-panel-kicker">Profile Snapshot</p>
+              <h2>{profile.shortName}</h2>
+              <p className="hero-panel-text">
+                Computer science student focused on practical software work, structured thinking, and modern web
+                presentation.
+              </p>
+            </div>
+
+            <div className="hero-panel-grid">
+              <article>
+                <span>Base</span>
+                <strong>Hyderabad</strong>
+              </article>
+              <article>
+                <span>Primary Skills</span>
+                <strong>Python, C, Data Analysis</strong>
+              </article>
+              <article>
+                <span>Professional Focus</span>
+                <strong>Governance and Compliance</strong>
+              </article>
+              <article>
+                <span>Current Goal</span>
+                <strong>Internships and strong project work</strong>
+              </article>
+            </div>
+          </div>
         </div>
       </section>
 
